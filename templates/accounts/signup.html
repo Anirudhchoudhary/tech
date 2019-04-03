@@ -1,0 +1,18 @@
+{%extends 'home.html'%}
+{%block content%}
+<div class="container">
+<div class="jumbotron">
+<h2>Sign up</h2>
+<form action="{% url 'accounts:signup'%}" method="post">
+        {%csrf_token%}
+        <p><label for="id_email">Email address:</label> <input class="form-control" type="email" name="email" maxlength="255" required=""
+                        id="id_email"></p>
+        <p><label for="id_password">Password:</label> <input type="password" class="form-control" name="password" required=""
+                        id="id_password"></p>
+        <p><label for="id_password2">Confirm password:</label> <input type="password" class="form-control" name="password2" required=""
+                        id="id_password2"></p>
+                <button type="submit" class="btn btn-success">Sign up</button>
+</form>
+</div>
+</div>
+{%endblock%}

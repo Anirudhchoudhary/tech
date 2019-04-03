@@ -1,0 +1,116 @@
+{%extends 'home.html'%}
+{%block content%}
+<!--
+{{top_five_hs}}<br>
+-->
+<h1>TOP FIVE SCHOOL</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+            <th scope="col">MANDAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for school in top_five_school%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{school.school_name}}</td>
+            <td>{{school.District}}</td>
+            <td>{{school.Mandal}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<hr>
+<h1>TOP FIVE SCHOOL OF TYPE BHAV</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+            <th scope="col">MANDAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for school in top_five_BHAV%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{school.school_name}}</td>
+            <td>{{school.District}}</td>
+            <td>{{school.Mandal}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<hr>
+<h1>TOP FIVE SCHOOL OF TEACHER</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+            <th scope="col">MANDAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for school in top_five_teacher%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{school.school_name}}</td>
+            <td>{{school.District}}</td>
+            <td>{{school.Mandal}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<hr>
+<h1>TOP FIVE SCHOOL STAFF</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+            <th scope="col">MANDAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for school in top_school_staff%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{school.school_name}}</td>
+            <td>{{school.District}}</td>
+            <td>{{school.Mandal}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<hr>
+<h1>TOP FIVE NUMBER OF STUDENT</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">District</th>
+            <th scope="col">MANDAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for school in top_five_student%}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{school.school_name}}</td>
+            <td>{{school.District}}</td>
+            <td>{{school.Mandal}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<hr>
+{%endblock%}

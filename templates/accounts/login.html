@@ -1,0 +1,18 @@
+{% extends 'home.html'%}
+{%block content%}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2>LOGIN </h2>
+    <form action="{% url 'accounts:login'%}" method="post">
+        {%csrf_token%}
+    <p><label for="id_email">Email:</label> <input class="form-control" type="email" name="email" maxlength="30" required="" id="id_email">
+    </p>
+    <p><label for="id_password">Password:</label> <input class="form-control" type="password" name="password" required="" id="id_password">
+    </p>
+    <button type="submit" class="btn btn-success">Login</button>
+</form>
+<h4>Dont't Have Account</h4><button class="btn btn-success"><a class="dropdown-item" href="{% url 'accounts:signup' %}">SIGNUP</a></button>
+</div>
+</div>
+{%endblock%}

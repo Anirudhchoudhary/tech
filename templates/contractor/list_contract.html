@@ -1,0 +1,12 @@
+{%extends 'home.html'%}
+{%block content%}
+<div class="container">
+{% for objects in contract_list%}
+<div class="alert alert-success" role="alert">
+    <a style="text-decoration:black;" href="{% url 'contract:contract_details' pk=objects.pk %}">
+        <h1>{{forloop.counter}}.{{objects.name}}</h1>
+    </a>
+</div>
+</div>
+{%endfor%}
+{%endblock%}
