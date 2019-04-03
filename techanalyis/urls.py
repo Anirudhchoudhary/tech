@@ -23,3 +23,7 @@ urlpatterns = [
     path('accounts/',include('accounts.urls')),
     path('contract/',include('contra.urls')),
 ]
+
+admin.site.site_header = "HAM ADMINISTRAION"
+admin.site.site_title = "HAM ADMINISTRAION Portal"
+admin.site.index_title = "Welcome to HAM Portal"
